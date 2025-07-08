@@ -7,20 +7,27 @@
 #include <memory>
 #include <filesystem>
 
-struct vec2 { float x, y; };
+struct vec2
+{
+    float x, y;
+};
 
-struct Tri { vec2 v0, v1, v2; };
+struct Tri
+{
+    vec2 v0, v1, v2;
+};
 
-struct push_constants {
+struct push_constants
+{
     Tri tri = {
-        { -0.5, 0.5 },
-        { 0.5, -0.5 },
-        { 0.5, 0.5}
-    };
+        {-0.5, 0.5},
+        {0.5, -0.5},
+        {0.5, 0.5}};
     float time;
 } push_constants;
 
-int main() {
+int main()
+{
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     auto window = glfwCreateWindow(1024, 1024, "Example", nullptr, nullptr);
@@ -31,17 +38,19 @@ int main() {
     imr::FpsCounter fps_counter;
     imr::ComputePipeline shader(device, "13_compute_triangle.spv");
 
-    auto& vk = device.dispatch;
-    while (!glfwWindowShouldClose(window)) {
+    auto &vk = device.dispatch;
+    while (!glfwWindowShouldClose(window))
+    {
         fps_counter.tick();
         fps_counter.updateGlfwWindowTitle(window);
 
-        swapchain.renderFrameSimplified([&](imr::Swapchain::SimplifiedRenderContext& context) {
+        swapchain.renderFrameSimplified([&](imr::Swapchain::SimplifiedRenderContext &context)
+                                        {
             auto& image = context.image();
             auto cmdbuf = context.cmdbuf();
 
             vk.cmdClearColorImage(cmdbuf, image.handle(), VK_IMAGE_LAYOUT_GENERAL, tmpPtr((VkClearColorValue) {
-                .float32 = { 0.0f, 0.0f, 0.0f, 1.0f },
+                .float32 = { 1.0f, 1.0f, 1.0f, 1.0f },
             }), 1, tmpPtr(image.whole_image_subresource_range()));
 
             // This barrier ensures that the clear is finished before we run the dispatch.
@@ -79,8 +88,7 @@ int main() {
             vkCmdDispatch(cmdbuf, (image.size().width + 31) / 32, (image.size().height + 31) / 32, 1);
             context.addCleanupAction([=, &device]() {
                 delete shader_bind_helper;
-            });
-        });
+            }); });
 
         glfwPollEvents();
     }

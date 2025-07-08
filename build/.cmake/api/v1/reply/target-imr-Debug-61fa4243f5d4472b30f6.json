@@ -1,0 +1,510 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "imr/libimr.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_dependencies",
+			"embed_file",
+			"generate_extinst_headers",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"imr/CMakeLists.txt",
+			"build/_deps/shady-src/src/api/CMakeLists.txt",
+			"build/_deps/shady-src/src/common/CMakeLists.txt",
+			"build/_deps/shady-src/src/shader-pipeline/CMakeLists.txt",
+			"build/_deps/shady-src/src/frontend/slim/CMakeLists.txt",
+			"build/_deps/shady-src/src/backend/c/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 14,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 18,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 3
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 4,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 8
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 4,
+				"file" : 4,
+				"line" : 7,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 11
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 15,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 14
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 16,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 16
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 20,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 18
+			},
+			{
+				"command" : 3,
+				"file" : 5,
+				"line" : 23,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 20
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 19,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20 -arch arm64"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "SPV_PARSER_PRESENT"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/imr/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/vk-bootstrap/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/VulkanMemoryAllocator/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-build/src/api"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/src/shady"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/SPIRV-Headers/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/src/common"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -arch arm64"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "SPV_PARSER_PRESENT"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 22,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/imr/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/vk-bootstrap/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/VulkanMemoryAllocator/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-build/src/api"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/src/shady"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/SPIRV-Headers/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/_deps/shady-src/src/common"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				15
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "common::@eafe95878403c81c06d5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "generate-grammar-headers::@e459646af60b2475376b"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "generate-enum-headers::@e459646af60b2475376b"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "generate-type-headers::@e459646af60b2475376b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "shady::@328ebcb0da39d4a04ccf"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "shader_pipeline::@0cff0528b6bb4fdd2c41"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "shady_scheduler_src_h::@0cff0528b6bb4fdd2c41"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "driver::@4f32ac82e3677bd99d3d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "frontend_slim::@08f4ba6386b57dd82f26"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "SlimFrontendOps_h::@08f4ba6386b57dd82f26"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "frontend_spirv::@1de2b116b3fefe327048"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "backend_spirv::@fc023ee42a2aaf7d8241"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "backend_c::@be64c32d006c96392875"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "shady_cuda_prelude_src_h::@be64c32d006c96392875"
+		},
+		{
+			"backtrace" : 17,
+			"id" : "shady_cuda_runtime_src_h::@be64c32d006c96392875"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "shady_glsl_runtime_120_src_h::@be64c32d006c96392875"
+		},
+		{
+			"backtrace" : 21,
+			"id" : "shady_ispc_runtime_src_h::@be64c32d006c96392875"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "vk-bootstrap::@67f30323df60bde9259d"
+		}
+	],
+	"id" : "imr::@e21de3ce4b379b848a03",
+	"name" : "imr",
+	"nameOnDisk" : "libimr.a",
+	"paths" : 
+	{
+		"build" : "imr",
+		"source" : "imr"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/context.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/device.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/swapchain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/buffer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/image.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/fps_counter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/graphics_pipeline.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/frame.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/present_helpers.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/render_simplified.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/descriptor_bind_helper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/render_targets_helper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/execute_commands.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "imr/src/vma.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "imr/src/util.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

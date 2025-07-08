@@ -1,0 +1,132 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"build/_deps/json-c-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 570,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 578,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 590,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 621,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 623,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"_deps/json-c-build/libjson-c.a"
+			],
+			"targetId" : "json-c::@b8f99ac22da5445c7845",
+			"targetIndex" : 60,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/json-c",
+			"exportName" : "json-c-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "json-c::@b8f99ac22da5445c7845",
+					"index" : 60
+				}
+			],
+			"paths" : 
+			[
+				"_deps/json-c-build/CMakeFiles/Export/c72427da9e5c73ebf6c111c2977a0759/json-c-targets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/json-c",
+			"paths" : 
+			[
+				"build/_deps/json-c-build/json-c-config.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/_deps/json-c-build/json-c.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "/usr/local/include/json-c",
+			"paths" : 
+			[
+				"build/_deps/json-c-build/json_config.h",
+				"build/_deps/json-c-build/json.h",
+				"build/_deps/json-c-src/arraylist.h",
+				"build/_deps/json-c-src/debug.h",
+				"build/_deps/json-c-src/json_c_version.h",
+				"build/_deps/json-c-src/json_inttypes.h",
+				"build/_deps/json-c-src/json_object.h",
+				"build/_deps/json-c-src/json_object_iterator.h",
+				"build/_deps/json-c-src/json_tokener.h",
+				"build/_deps/json-c-src/json_types.h",
+				"build/_deps/json-c-src/json_util.h",
+				"build/_deps/json-c-src/json_visit.h",
+				"build/_deps/json-c-src/linkhash.h",
+				"build/_deps/json-c-src/printbuf.h",
+				"build/_deps/json-c-src/json_pointer.h",
+				"build/_deps/json-c-src/json_patch.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/json-c-build",
+		"source" : "build/_deps/json-c-src"
+	}
+}

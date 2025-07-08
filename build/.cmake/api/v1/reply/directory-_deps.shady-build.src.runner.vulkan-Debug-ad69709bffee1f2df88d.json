@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"shady_add_component"
+		],
+		"files" : 
+		[
+			"build/_deps/shady-src/src/CMakeLists.txt",
+			"build/_deps/shady-src/src/runner/vulkan/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/lib",
+			"paths" : 
+			[
+				"lib/libshady_runner_vk.a"
+			],
+			"targetId" : "runner_vk::@57c0bd7314ec7ac08ba5",
+			"targetIndex" : 70,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/shady-build/src/runner/vulkan",
+		"source" : "build/_deps/shady-src/src/runner/vulkan"
+	}
+}

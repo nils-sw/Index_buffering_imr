@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"shady_add_component"
+		],
+		"files" : 
+		[
+			"build/_deps/shady-src/src/CMakeLists.txt",
+			"build/_deps/shady-src/src/runner/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build/lib",
+			"paths" : 
+			[
+				"lib/libshady_runner.a"
+			],
+			"targetId" : "runner::@004594c3aa6933524e66",
+			"targetIndex" : 68,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/shady-build/src/runner",
+		"source" : "build/_deps/shady-src/src/runner"
+	}
+}

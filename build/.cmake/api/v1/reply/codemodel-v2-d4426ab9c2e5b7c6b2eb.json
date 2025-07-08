@@ -1,0 +1,1714 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						41,
+						42,
+						43,
+						44
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "_deps/shady-build",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						5,
+						38,
+						39,
+						40
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build-Debug-434eb9487111809e9d14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src"
+				},
+				{
+					"build" : "_deps/shady-build/SPIRV-Headers",
+					"jsonFile" : "directory-_deps.shady-build.SPIRV-Headers-Debug-03cab335351ebd91dc28.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "build/_deps/shady-src/SPIRV-Headers"
+				},
+				{
+					"build" : "_deps/json-c-build",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.json-c-build-Debug-4281695d8b205a4251e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "build/_deps/json-c-src",
+					"targetIndexes" : 
+					[
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						50,
+						60
+					]
+				},
+				{
+					"build" : "_deps/json-c-build/doc",
+					"jsonFile" : "directory-_deps.json-c-build.doc-Debug-81e4b96c4f41a67f3ac1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "build/_deps/json-c-src/doc"
+				},
+				{
+					"build" : "_deps/shady-build/src",
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8,
+						9,
+						24,
+						25,
+						27,
+						30,
+						31,
+						35
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src-Debug-ef6fb079d769d932976e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src"
+				},
+				{
+					"build" : "_deps/shady-build/src/common",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.common-Debug-41ff7e10dc9d4ecc83a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/common",
+					"targetIndexes" : 
+					[
+						47,
+						82,
+						83
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/generator",
+					"jsonFile" : "directory-_deps.shady-build.src.generator-Debug-f6dc6eec6713e531d707.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/generator",
+					"targetIndexes" : 
+					[
+						78
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/api",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.api-Debug-c4384fe8f1f779c1e397.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/api",
+					"targetIndexes" : 
+					[
+						56,
+						57,
+						58
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/shady",
+					"childIndexes" : 
+					[
+						10,
+						11,
+						23
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.shady-Debug-70140d6a548886955d16.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady",
+					"targetIndexes" : 
+					[
+						48,
+						61,
+						65,
+						66,
+						67,
+						74,
+						84,
+						85
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/analysis",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.analysis-Debug-984b81c976e2b00f75b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/analysis"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes",
+					"childIndexes" : 
+					[
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					],
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes-Debug-031632916f1dfd46083f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/abi",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.abi-Debug-8b5a61b9896af12711c3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/abi"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/cf",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.cf-Debug-518c9a4d47d50df9fd5a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/cf"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/fncalls",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.fncalls-Debug-0460e406f7e221d49639.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/fncalls"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/group",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.group-Debug-480340267795db84a5a5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/group"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/io",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.io-Debug-ab038b4bea6d4b5d644a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/io"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/mem",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.mem-Debug-98d266a2b39e5e63a5f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/mem"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/opt",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.opt-Debug-c2fb457140521721a117.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/opt"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/polyfill",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.polyfill-Debug-083747c302a38d87ebd8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/polyfill"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/ptr",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.ptr-Debug-64a42eb49f7973d4bc8e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/ptr"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/stack",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.stack-Debug-c68d1dba5dc093506768.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/stack"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/passes/structure",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.passes.structure-Debug-9d085d89471b23206dcb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/passes/structure"
+				},
+				{
+					"build" : "_deps/shady-build/src/shady/ir",
+					"jsonFile" : "directory-_deps.shady-build.src.shady.ir-Debug-c0016c134eea1f0198cf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shady/ir"
+				},
+				{
+					"build" : "_deps/shady-build/src/shader-pipeline",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.shader-pipeline-Debug-ee00226feb282f0aed68.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/shader-pipeline",
+					"targetIndexes" : 
+					[
+						73,
+						80
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/runtime",
+					"childIndexes" : 
+					[
+						26
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.runtime-Debug-48575a3878378702a25c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/runtime",
+					"targetIndexes" : 
+					[
+						71
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/runtime/vulkan",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.runtime.vulkan-Debug-b32dbb6a8773e040bd44.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 25,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/runtime/vulkan",
+					"targetIndexes" : 
+					[
+						72
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/runner",
+					"childIndexes" : 
+					[
+						28,
+						29
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.runner-Debug-eab9bc800ae0c5e7df3f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/runner",
+					"targetIndexes" : 
+					[
+						68,
+						69
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/runner/vulkan",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.runner.vulkan-Debug-ad69709bffee1f2df88d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 27,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/runner/vulkan",
+					"targetIndexes" : 
+					[
+						70
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/runner/cuda",
+					"jsonFile" : "directory-_deps.shady-build.src.runner.cuda-Debug-f8354e280f2ab475801a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 27,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/runner/cuda"
+				},
+				{
+					"build" : "_deps/shady-build/src/driver",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.driver-Debug-09f9ad70623f6792c89a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/driver",
+					"targetIndexes" : 
+					[
+						49,
+						51,
+						81
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/frontend",
+					"childIndexes" : 
+					[
+						32,
+						33,
+						34
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.frontend-Debug-4e7eebe34d88cd8dbb64.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/frontend"
+				},
+				{
+					"build" : "_deps/shady-build/src/frontend/slim",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.frontend.slim-Debug-0fb4208758428ab41bae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 31,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/frontend/slim",
+					"targetIndexes" : 
+					[
+						44,
+						52
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/frontend/spirv",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.frontend.spirv-Debug-eb81769d020e61e0d0cb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 31,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/frontend/spirv",
+					"targetIndexes" : 
+					[
+						53
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/frontend/llvm",
+					"jsonFile" : "directory-_deps.shady-build.src.frontend.llvm-Debug-0df35a7fe4f976150fb5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 31,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/frontend/llvm"
+				},
+				{
+					"build" : "_deps/shady-build/src/backend",
+					"childIndexes" : 
+					[
+						36,
+						37
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.backend-Debug-6d9cc77ef6c4f0208005.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/backend"
+				},
+				{
+					"build" : "_deps/shady-build/src/backend/spirv",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.backend.spirv-Debug-b1abfeb0f602a68e2fd0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/backend/spirv",
+					"targetIndexes" : 
+					[
+						46
+					]
+				},
+				{
+					"build" : "_deps/shady-build/src/backend/c",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.src.backend.c-Debug-17ca730204bad21fc54a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 35,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/src/backend/c",
+					"targetIndexes" : 
+					[
+						45,
+						75,
+						76,
+						77,
+						79
+					]
+				},
+				{
+					"build" : "_deps/shady-build/vcc",
+					"jsonFile" : "directory-_deps.shady-build.vcc-Debug-89ac60ed6b037ba5b310.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/vcc"
+				},
+				{
+					"build" : "_deps/shady-build/zhady",
+					"jsonFile" : "directory-_deps.shady-build.zhady-Debug-30dde8a8d5bcf239a06c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/shady-src/zhady"
+				},
+				{
+					"build" : "_deps/shady-build/nasl",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.shady-build.nasl-Debug-15d87aed1a02a8cc3a3a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "build/_deps/shady-src/nasl"
+				},
+				{
+					"build" : "vk-bootstrap",
+					"jsonFile" : "directory-vk-bootstrap-Debug-42e8d0632a902099c454.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "vk-bootstrap",
+					"targetIndexes" : 
+					[
+						86
+					]
+				},
+				{
+					"build" : "VulkanMemoryAllocator",
+					"jsonFile" : "directory-VulkanMemoryAllocator-Debug-57c9b5fd9e25b254341a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "VulkanMemoryAllocator"
+				},
+				{
+					"build" : "imr",
+					"jsonFile" : "directory-imr-Debug-bcb50708a26bbfc1b77b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "imr",
+					"targetIndexes" : 
+					[
+						59
+					]
+				},
+				{
+					"build" : "examples",
+					"childIndexes" : 
+					[
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53
+					],
+					"jsonFile" : "directory-examples-Debug-1c8b83b621b6ef38a245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples"
+				},
+				{
+					"build" : "examples/11_present_image",
+					"jsonFile" : "directory-examples.11_present_image-Debug-cd4c794882c2ba1ff52d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/11_present_image",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "examples/12_compute_shader",
+					"jsonFile" : "directory-examples.12_compute_shader-Debug-870faed91db3201ea012.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/12_compute_shader",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"build" : "examples/13_compute_triangle",
+					"jsonFile" : "directory-examples.13_compute_triangle-Debug-f22b45cf5b62b156c5a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/13_compute_triangle",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "examples/14_compute_cube",
+					"jsonFile" : "directory-examples.14_compute_cube-Debug-980219d20b416329d854.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/14_compute_cube",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "examples/15_compute_cubes",
+					"jsonFile" : "directory-examples.15_compute_cubes-Debug-ba6ede5f56b70f611f58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/15_compute_cubes",
+					"targetIndexes" : 
+					[
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				},
+				{
+					"build" : "examples/20_graphics_pipeline",
+					"jsonFile" : "directory-examples.20_graphics_pipeline-Debug-a863014c660f094d0edd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/20_graphics_pipeline",
+					"targetIndexes" : 
+					[
+						13,
+						14,
+						15
+					]
+				},
+				{
+					"build" : "examples/present_from_buffer",
+					"jsonFile" : "directory-examples.present_from_buffer-Debug-b16509c45981cd8c6ce9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/present_from_buffer",
+					"targetIndexes" : 
+					[
+						62
+					]
+				},
+				{
+					"build" : "examples/present_from_image",
+					"jsonFile" : "directory-examples.present_from_image-Debug-6e704ce090c6f9d3383b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/present_from_image",
+					"targetIndexes" : 
+					[
+						63,
+						64
+					]
+				},
+				{
+					"build" : "examples/fun_tests",
+					"jsonFile" : "directory-examples.fun_tests-Debug-804b19462f9bf6e133c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"parentIndex" : 44,
+					"projectIndex" : 0,
+					"source" : "examples/fun_tests",
+					"targetIndexes" : 
+					[
+						54,
+						55
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53
+					],
+					"name" : "imr",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						54,
+						55,
+						59,
+						62,
+						63,
+						64
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39
+					],
+					"name" : "shady",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						51,
+						52,
+						53,
+						56,
+						57,
+						58,
+						61,
+						65,
+						66,
+						67,
+						68,
+						69,
+						70,
+						71,
+						72,
+						73,
+						74,
+						75,
+						76,
+						77,
+						78,
+						79,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "SPIRV-Headers",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "json-c",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						50,
+						60
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						40
+					],
+					"name" : "nasl",
+					"parentIndex" : 1
+				},
+				{
+					"directoryIndexes" : 
+					[
+						41
+					],
+					"name" : "VulkanBootstrap",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						86
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						42
+					],
+					"name" : "VMA",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 45,
+					"id" : "11_present_image::@328b9440601ad7b73910",
+					"jsonFile" : "target-11_present_image-Debug-4bb644731b3eeb971f22.json",
+					"name" : "11_present_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "12_compute_shader::@0d7b706ee5d3f5297ba3",
+					"jsonFile" : "target-12_compute_shader-Debug-2078551a3973c9908701.json",
+					"name" : "12_compute_shader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 46,
+					"id" : "12_compute_shader_spv::@0d7b706ee5d3f5297ba3",
+					"jsonFile" : "target-12_compute_shader_spv-Debug-e8c0effe9dadf2d87dd9.json",
+					"name" : "12_compute_shader_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "13_compute_triangle::@521709e65a4d83694ec2",
+					"jsonFile" : "target-13_compute_triangle-Debug-f906bd62be94450d1d6a.json",
+					"name" : "13_compute_triangle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 47,
+					"id" : "13_compute_triangle_spv::@521709e65a4d83694ec2",
+					"jsonFile" : "target-13_compute_triangle_spv-Debug-d285c9e0b15740a3ebab.json",
+					"name" : "13_compute_triangle_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "14_compute_cube::@15d6f031fb1302d0fa1f",
+					"jsonFile" : "target-14_compute_cube-Debug-a6176d4292eb45f6cbbb.json",
+					"name" : "14_compute_cube",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 48,
+					"id" : "14_compute_cube_spv::@15d6f031fb1302d0fa1f",
+					"jsonFile" : "target-14_compute_cube_spv-Debug-5ab5ef4c48eaaccb016e.json",
+					"name" : "14_compute_cube_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes-Debug-043564a1c7e5fe7625ca.json",
+					"name" : "15_compute_cubes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes_batched_spv::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes_batched_spv-Debug-f1a4075302244672f807.json",
+					"name" : "15_compute_cubes_batched_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes_instanced_spv::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes_instanced_spv-Debug-f9bf5f6979b363062619.json",
+					"name" : "15_compute_cubes_instanced_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes_pipelined_raster_spv::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes_pipelined_raster_spv-Debug-803e29fd7e025ae12160.json",
+					"name" : "15_compute_cubes_pipelined_raster_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes_pipelined_triangles_spv::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes_pipelined_triangles_spv-Debug-5bae39086ea514d9d5e4.json",
+					"name" : "15_compute_cubes_pipelined_triangles_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 49,
+					"id" : "15_compute_cubes_spv::@52fa068e23bfbbe0c85f",
+					"jsonFile" : "target-15_compute_cubes_spv-Debug-19ef817790a9b924adde.json",
+					"name" : "15_compute_cubes_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "20_graphics_pipeline::@92ef5b0cf97ba8511c2e",
+					"jsonFile" : "target-20_graphics_pipeline-Debug-9a5e9f70cf1f0426c3b1.json",
+					"name" : "20_graphics_pipeline",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "20_graphics_pipeline_frag_spv::@92ef5b0cf97ba8511c2e",
+					"jsonFile" : "target-20_graphics_pipeline_frag_spv-Debug-71c01b6061aafbc8504a.json",
+					"name" : "20_graphics_pipeline_frag_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 50,
+					"id" : "20_graphics_pipeline_vert_spv::@92ef5b0cf97ba8511c2e",
+					"jsonFile" : "target-20_graphics_pipeline_vert_spv-Debug-4cbd65b1a636630066d6.json",
+					"name" : "20_graphics_pipeline_vert_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Continuous::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-Continuous-Debug-b1d90f83ccb4a74aad99.json",
+					"name" : "Continuous",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousBuild::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousBuild-Debug-3242e7bdb6d7cbe75630.json",
+					"name" : "ContinuousBuild",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousConfigure::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousConfigure-Debug-34a0a87e6b11b8d69d31.json",
+					"name" : "ContinuousConfigure",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousCoverage::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousCoverage-Debug-4ef77790d5517a3cd775.json",
+					"name" : "ContinuousCoverage",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousMemCheck::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousMemCheck-Debug-2cedf2b888b2b66c5ab2.json",
+					"name" : "ContinuousMemCheck",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousStart::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousStart-Debug-f6d591c20df6556da3ef.json",
+					"name" : "ContinuousStart",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousSubmit::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousSubmit-Debug-e028336767ab71a562e5.json",
+					"name" : "ContinuousSubmit",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousTest::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousTest-Debug-a1abd9c8f22054820ad7.json",
+					"name" : "ContinuousTest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ContinuousUpdate::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ContinuousUpdate-Debug-cb1270d19524076fc8b0.json",
+					"name" : "ContinuousUpdate",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Experimental::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-Experimental-Debug-011798ae76ff55917393.json",
+					"name" : "Experimental",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalBuild::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalBuild-Debug-8eb2399407a1ca945289.json",
+					"name" : "ExperimentalBuild",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalConfigure::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalConfigure-Debug-73c80b279f40a0be99d4.json",
+					"name" : "ExperimentalConfigure",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalCoverage::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalCoverage-Debug-898477f7edf1e4b91853.json",
+					"name" : "ExperimentalCoverage",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalMemCheck::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalMemCheck-Debug-16ef9119deffb92a9f0e.json",
+					"name" : "ExperimentalMemCheck",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalStart::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalStart-Debug-e075e2cc2206463b5798.json",
+					"name" : "ExperimentalStart",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalSubmit::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalSubmit-Debug-1a55b1dbb8045c49b014.json",
+					"name" : "ExperimentalSubmit",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalTest::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalTest-Debug-bda601a90e04c9d39e29.json",
+					"name" : "ExperimentalTest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ExperimentalUpdate::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-ExperimentalUpdate-Debug-56a0c9a8e934a18fb2b4.json",
+					"name" : "ExperimentalUpdate",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Nightly::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-Nightly-Debug-72b10efa11d436db7732.json",
+					"name" : "Nightly",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyBuild::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyBuild-Debug-cd7acaf2486a18681872.json",
+					"name" : "NightlyBuild",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyConfigure::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyConfigure-Debug-03ba6088d791c60cc467.json",
+					"name" : "NightlyConfigure",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyCoverage::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyCoverage-Debug-de1e8df72a0b282a0992.json",
+					"name" : "NightlyCoverage",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyMemCheck::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyMemCheck-Debug-01dcda332dcbdff83635.json",
+					"name" : "NightlyMemCheck",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyMemoryCheck::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyMemoryCheck-Debug-c5c8be4ed1f120843b28.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyStart::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyStart-Debug-e82e0bc467ce03737dc3.json",
+					"name" : "NightlyStart",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlySubmit::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlySubmit-Debug-79c5e2a8b6722a5828cc.json",
+					"name" : "NightlySubmit",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyTest::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyTest-Debug-fd2d811f302ad9b78331.json",
+					"name" : "NightlyTest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "NightlyUpdate::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-NightlyUpdate-Debug-b69823729d651c17eb50.json",
+					"name" : "NightlyUpdate",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "SlimFrontendOps_h::@08f4ba6386b57dd82f26",
+					"jsonFile" : "target-SlimFrontendOps_h-Debug-45327e16c6a2650ee065.json",
+					"name" : "SlimFrontendOps_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "backend_c::@be64c32d006c96392875",
+					"jsonFile" : "target-backend_c-Debug-9e0559788742ad55caf9.json",
+					"name" : "backend_c",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 36,
+					"id" : "backend_spirv::@fc023ee42a2aaf7d8241",
+					"jsonFile" : "target-backend_spirv-Debug-430f60c746eb11f6fe98.json",
+					"name" : "backend_spirv",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "common::@eafe95878403c81c06d5",
+					"jsonFile" : "target-common-Debug-1738d884394ab8de729a.json",
+					"name" : "common",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "constructors_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-constructors_generated-Debug-92dc1fc162b426aaafb5.json",
+					"name" : "constructors_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "copy_dlls::@4f32ac82e3677bd99d3d",
+					"jsonFile" : "target-copy_dlls-Debug-233f78b763881a4ec283.json",
+					"name" : "copy_dlls",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "distcheck::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-distcheck-Debug-497e25559f94b58d35a5.json",
+					"name" : "distcheck",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "driver::@4f32ac82e3677bd99d3d",
+					"jsonFile" : "target-driver-Debug-830fb1ebdef6505b8e59.json",
+					"name" : "driver",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 32,
+					"id" : "frontend_slim::@08f4ba6386b57dd82f26",
+					"jsonFile" : "target-frontend_slim-Debug-d621d659caf4f40a585c.json",
+					"name" : "frontend_slim",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 33,
+					"id" : "frontend_spirv::@1de2b116b3fefe327048",
+					"jsonFile" : "target-frontend_spirv-Debug-3681329fddb539321634.json",
+					"name" : "frontend_spirv",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "fun_tests::@973e50c29e9a8665ac02",
+					"jsonFile" : "target-fun_tests-Debug-754ba5fb27fcd633dae5.json",
+					"name" : "fun_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 53,
+					"id" : "fun_tests_spv::@973e50c29e9a8665ac02",
+					"jsonFile" : "target-fun_tests_spv-Debug-19b3c0b05a974e85f77f.json",
+					"name" : "fun_tests_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "generate-enum-headers::@e459646af60b2475376b",
+					"jsonFile" : "target-generate-enum-headers-Debug-80da69529af779d980bf.json",
+					"name" : "generate-enum-headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "generate-grammar-headers::@e459646af60b2475376b",
+					"jsonFile" : "target-generate-grammar-headers-Debug-892abb23b2543ad13fb0.json",
+					"name" : "generate-grammar-headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "generate-type-headers::@e459646af60b2475376b",
+					"jsonFile" : "target-generate-type-headers-Debug-0d553fa99e20fb66ba5c.json",
+					"name" : "generate-type-headers",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 43,
+					"id" : "imr::@e21de3ce4b379b848a03",
+					"jsonFile" : "target-imr-Debug-61fa4243f5d4472b30f6.json",
+					"name" : "imr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "json-c::@b8f99ac22da5445c7845",
+					"jsonFile" : "target-json-c-Debug-6132bef7a97d4a7d0ce1.json",
+					"name" : "json-c",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "node_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-node_generated-Debug-3992b56446c79331c5ef.json",
+					"name" : "node_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 51,
+					"id" : "present_from_buffer::@f629976cb18385f4287d",
+					"jsonFile" : "target-present_from_buffer-Debug-d549a7825694815e9c8f.json",
+					"name" : "present_from_buffer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 52,
+					"id" : "present_from_image::@d69802daea1f60bb1d13",
+					"jsonFile" : "target-present_from_image-Debug-4f2bdd8ffe1427df1e67.json",
+					"name" : "present_from_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 52,
+					"id" : "present_from_image_spv::@d69802daea1f60bb1d13",
+					"jsonFile" : "target-present_from_image_spv-Debug-b774d32443f1c0f8f08f.json",
+					"name" : "present_from_image_spv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "primops_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-primops_generated-Debug-ebce8d538954da7819b8.json",
+					"name" : "primops_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "print_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-print_generated-Debug-8739368070709b2488f4.json",
+					"name" : "print_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "rewrite_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-rewrite_generated-Debug-946060fc102b9816dd23.json",
+					"name" : "rewrite_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 27,
+					"id" : "runner::@004594c3aa6933524e66",
+					"jsonFile" : "target-runner-Debug-7485c5e613e01f9d3add.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 27,
+					"id" : "runner_test::@004594c3aa6933524e66",
+					"jsonFile" : "target-runner_test-Debug-b460a08c382e906e1605.json",
+					"name" : "runner_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 28,
+					"id" : "runner_vk::@57c0bd7314ec7ac08ba5",
+					"jsonFile" : "target-runner_vk-Debug-f169c83cf22590aa4683.json",
+					"name" : "runner_vk",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "runtime::@639c04a50a3cf07bbd4e",
+					"jsonFile" : "target-runtime-Debug-7da10eeca0da898c17ee.json",
+					"name" : "runtime",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 26,
+					"id" : "runtime_vk::@5f6fef65d683986cb8d7",
+					"jsonFile" : "target-runtime_vk-Debug-1c55289b69fc22a27b2e.json",
+					"name" : "runtime_vk",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "shader_pipeline::@0cff0528b6bb4fdd2c41",
+					"jsonFile" : "target-shader_pipeline-Debug-cdd244b67d58b7f553a9.json",
+					"name" : "shader_pipeline",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "shady::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-shady-Debug-a753c08e68ea59573b2a.json",
+					"name" : "shady",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "shady_cuda_prelude_src_h::@be64c32d006c96392875",
+					"jsonFile" : "target-shady_cuda_prelude_src_h-Debug-50ae057ccfe1b85972bf.json",
+					"name" : "shady_cuda_prelude_src_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "shady_cuda_runtime_src_h::@be64c32d006c96392875",
+					"jsonFile" : "target-shady_cuda_runtime_src_h-Debug-8d473eacc61d522bc5c1.json",
+					"name" : "shady_cuda_runtime_src_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "shady_glsl_runtime_120_src_h::@be64c32d006c96392875",
+					"jsonFile" : "target-shady_glsl_runtime_120_src_h-Debug-5e2613eb8d81779cbc52.json",
+					"name" : "shady_glsl_runtime_120_src_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "shady_imported_json::@6044f08daff2d4c0989c",
+					"jsonFile" : "target-shady_imported_json-Debug-c03585b53d19348c12c7.json",
+					"name" : "shady_imported_json",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 37,
+					"id" : "shady_ispc_runtime_src_h::@be64c32d006c96392875",
+					"jsonFile" : "target-shady_ispc_runtime_src_h-Debug-eefc6ec1f01d5eb3d434.json",
+					"name" : "shady_ispc_runtime_src_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 24,
+					"id" : "shady_scheduler_src_h::@0cff0528b6bb4fdd2c41",
+					"jsonFile" : "target-shady_scheduler_src_h-Debug-caced051d99176226832.json",
+					"name" : "shady_scheduler_src_h",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 30,
+					"id" : "slim::@4f32ac82e3677bd99d3d",
+					"jsonFile" : "target-slim-Debug-f464bd1d7d05048d7ae5.json",
+					"name" : "slim",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "test_dict::@eafe95878403c81c06d5",
+					"jsonFile" : "target-test_dict-Debug-9ee8de60c3dc9f55fd72.json",
+					"name" : "test_dict",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "test_util::@eafe95878403c81c06d5",
+					"jsonFile" : "target-test_util-Debug-c5dcb8c1dd03c76bc679.json",
+					"name" : "test_util",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "type_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-type_generated-Debug-906a0f7a6fad1532b724.json",
+					"name" : "type_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "visit_generated::@328ebcb0da39d4a04ccf",
+					"jsonFile" : "target-visit_generated-Debug-6aaa2bb45e553d6d7ecd.json",
+					"name" : "visit_generated",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 41,
+					"id" : "vk-bootstrap::@67f30323df60bde9259d",
+					"jsonFile" : "target-vk-bootstrap-Debug-85e3edbe5476609d527a.json",
+					"name" : "vk-bootstrap",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/nilsselvidge/Documents/University/2025_SS/imr/build",
+		"source" : "/Users/nilsselvidge/Documents/University/2025_SS/imr"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
