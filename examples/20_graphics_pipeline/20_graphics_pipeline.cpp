@@ -102,8 +102,7 @@ struct
     VkDeviceAddress vertex_buffer;
     mat4 matrix;
     float time;
-    // VkDeviceAddress index_buffer;
-    // VkDeviceAddress face_index_buffer;
+    VkDeviceAddress face_index_buffer;
 } push_constants_batched;
 
 Camera camera;
@@ -117,7 +116,7 @@ void camera_update(GLFWwindow *, CameraInput *input);
 
 bool reload_shaders = false;
 
-#define INSTANCES_COUNT 1
+#define INSTANCES_COUNT 10240
 
 struct Shaders
 {
@@ -185,10 +184,9 @@ int main(int argc, char **argv)
     auto cube = make_cube();
     std::unique_ptr<imr::Buffer> vertex_buffer;
     std::unique_ptr<imr::Buffer> index_buffer;
+    std::unique_ptr<imr::Buffer> face_buffer;
     std::vector<uint32_t> indices;
 
-    // if (true)
-    // {
     std::vector<vec3> vertices = {
         {0, 0, 0}, // 0: A
         {1, 0, 0}, // 1: B
@@ -221,41 +219,47 @@ int main(int argc, char **argv)
         {4, 7, 6, 5, faceColors[4]},
         // bottom face (E, F, B, A)
         {4, 5, 1, 0, faceColors[5]}};
-    std::vector<uint32_t> face_indices; // For each triangle, which face it belongs to
+    std::vector<vec3> face_colors;
     for (size_t f = 0; f < faces.size(); ++f)
     {
         // First triangle: v0, v1, v3
         indices.push_back(faces[f].v0);
         indices.push_back(faces[f].v1);
         indices.push_back(faces[f].v3);
-        face_indices.push_back(f);
+        face_colors.push_back(faces[f].color);
+
         // Second triangle: v1, v2, v3
         indices.push_back(faces[f].v1);
         indices.push_back(faces[f].v2);
         indices.push_back(faces[f].v3);
-        face_indices.push_back(f);
+        face_colors.push_back(faces[f].color);
     }
 
     // Create a single buffer for positions (8) and face colors (6)
     std::vector<vec3> vertex_buffer_data;
     std::vector<uint32_t> index_buffer_data;
+    std::vector<vec3> face_buffer_data;
+
     vertex_buffer_data.insert(vertex_buffer_data.end(), vertices.begin(), vertices.end());
-    vertex_buffer_data.insert(vertex_buffer_data.end(), faceColors.begin(), faceColors.end());
     index_buffer_data.insert(index_buffer_data.end(), indices.begin(), indices.end());
+    face_buffer_data.insert(face_buffer_data.end(), face_colors.begin(), face_colors.end());
 
     vertex_buffer = std::make_unique<imr::Buffer>(device, sizeof(vertex_buffer_data[0]) * vertex_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
     index_buffer = std::make_unique<imr::Buffer>(device, sizeof(index_buffer_data[0]) * index_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
+    face_buffer = std::make_unique<imr::Buffer>(device, sizeof(face_buffer_data[0]) * face_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
 
     push_constants_batched.vertex_buffer = vertex_buffer->device_address();
     // push_constants_batched.index_buffer = index_buffer->device_address();
+    push_constants_batched.face_index_buffer = face_buffer->device_address();
     vertex_buffer->uploadDataSync(0, vertex_buffer->size, vertex_buffer_data.data());
     index_buffer->uploadDataSync(0, index_buffer->size, index_buffer_data.data());
+    face_buffer->uploadDataSync(0, face_buffer->size, face_buffer_data.data());
 
-    auto face_index_buffer = std::make_unique<imr::Buffer>(
+    /*auto face_index_buffer = std::make_unique<imr::Buffer>(
         device,
         sizeof(uint32_t) * face_indices.size(),
         VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
-    face_index_buffer->uploadDataSync(0, face_index_buffer->size, face_indices.data());
+    face_index_buffer->uploadDataSync(0, face_index_buffer->size, face_indices.data());*/
     // push_constants_batched.face_index_buffer = face_index_buffer->device_address();
 
     for (size_t i = 0; i < indices.size(); ++i)
@@ -375,7 +379,7 @@ int main(int argc, char **argv)
 
                     //Work here for the index buffer: vkCmdDrawIndexed and add the index buffer to the pipeline
                     push_constants_batched.matrix = cube_matrix;
-                    vkCmdPushConstants(cmdbuf, pipeline->layout(), VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(push_constants_batched), &push_constants_batched);
+                    vkCmdPushConstants(cmdbuf, pipeline->layout(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(push_constants_batched), &push_constants_batched);
                     
                     vkCmdDrawIndexed(cmdbuf, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
                 }
