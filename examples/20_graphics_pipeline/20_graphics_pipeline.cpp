@@ -78,7 +78,7 @@ Cube make_cube()
          */
         cube.triangles[i++] = {v0, v1, v3, color};
         cube.triangles[i++] = {v1, v2, v3, color};
-        cube.faces[i++] = {v0, v1, v2, v3, color};
+        // cube.faces[i++] = {v0, v1, v2, v3, color};
     };
 
     // top face
@@ -93,7 +93,7 @@ Cube make_cube()
     add_face(E, H, G, F, vec3(0, 1, 1));
     // bottom face
     add_face(E, F, B, A, vec3(1, 1, 0));
-    assert(i == 12 + 6);
+    assert(i == 12);
     return cube;
 }
 
@@ -116,6 +116,8 @@ CameraInput camera_input;
 void camera_update(GLFWwindow *, CameraInput *input);
 
 bool reload_shaders = false;
+
+bool indexed = true; // Set to false to use non-indexed rendering
 
 #define INSTANCES_COUNT 10240000
 
@@ -175,7 +177,9 @@ int main(int argc, char **argv)
     glfwSetKeyCallback(window, [](GLFWwindow *window, int key, int scancode, int action, int mods)
                        {
         if (key == GLFW_KEY_R && (mods & GLFW_MOD_CONTROL))
-            reload_shaders = true; });
+            reload_shaders = true;
+        if (key == GLFW_KEY_C && action == GLFW_PRESS)
+            indexed = !indexed; });
 
     imr::Context context;
     imr::Device device(context);
@@ -187,6 +191,7 @@ int main(int argc, char **argv)
     std::unique_ptr<imr::Buffer> index_buffer;
     std::unique_ptr<imr::Buffer> face_buffer;
     std::unique_ptr<imr::Buffer> position_buffer;
+    std::unique_ptr<imr::Buffer> vertex_buffer_nonindexed;
     std::vector<uint32_t> indices;
 
     std::vector<vec3> vertices = {
@@ -199,6 +204,16 @@ int main(int argc, char **argv)
         {1, 1, 1}, // 6: G
         {0, 1, 1}  // 7: H
     };
+
+    std::vector<vec3> vertices_nonindexed;
+
+    for (auto &tri : cube.triangles)
+    {
+        vertices_nonindexed.push_back(tri.v0);
+        vertices_nonindexed.push_back(tri.v1);
+        vertices_nonindexed.push_back(tri.v2);
+    }
+
     // Use per-face colors
     std::vector<vec3> faceColors = {
         {0, 1, 0}, // top
@@ -238,24 +253,24 @@ int main(int argc, char **argv)
     }
 
     // Create a single buffer for positions (8) and face colors (6)
-    std::vector<vec3> vertex_buffer_data;
     std::vector<uint32_t> index_buffer_data;
-    std::vector<vec3> face_buffer_data;
 
-    vertex_buffer_data.insert(vertex_buffer_data.end(), vertices.begin(), vertices.end());
+    face_buffer = std::make_unique<imr::Buffer>(device, sizeof(face_colors[0]) * face_colors.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
+    face_buffer->uploadDataSync(0, face_buffer->size, face_colors.data());
+
+    vertex_buffer = std::make_unique<imr::Buffer>(device, sizeof(vertices[0]) * vertices.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
+    vertex_buffer->uploadDataSync(0, vertex_buffer->size, vertices.data());
+
+    vertex_buffer_nonindexed = std::make_unique<imr::Buffer>(device, sizeof(vertices_nonindexed[0]) * vertices_nonindexed.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
+    vertex_buffer_nonindexed->uploadDataSync(0, vertex_buffer_nonindexed->size, vertices_nonindexed.data());
+
     index_buffer_data.insert(index_buffer_data.end(), indices.begin(), indices.end());
-    face_buffer_data.insert(face_buffer_data.end(), face_colors.begin(), face_colors.end());
 
-    vertex_buffer = std::make_unique<imr::Buffer>(device, sizeof(vertex_buffer_data[0]) * vertex_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
     index_buffer = std::make_unique<imr::Buffer>(device, sizeof(index_buffer_data[0]) * index_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
-    face_buffer = std::make_unique<imr::Buffer>(device, sizeof(face_buffer_data[0]) * face_buffer_data.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
 
-    push_constants_batched.vertex_buffer = vertex_buffer->device_address();
     // push_constants_batched.index_buffer = index_buffer->device_address();
     push_constants_batched.face_index_buffer = face_buffer->device_address();
-    vertex_buffer->uploadDataSync(0, vertex_buffer->size, vertex_buffer_data.data());
     index_buffer->uploadDataSync(0, index_buffer->size, index_buffer_data.data());
-    face_buffer->uploadDataSync(0, face_buffer->size, face_buffer_data.data());
 
     /*auto face_index_buffer = std::make_unique<imr::Buffer>(
         device,
@@ -374,7 +389,12 @@ int main(int argc, char **argv)
             auto& pipeline = shaders->pipeline;
             
             vkCmdBindPipeline(cmdbuf, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline->pipeline());
-            vkCmdBindIndexBuffer(cmdbuf, index_buffer->handle, 0, VK_INDEX_TYPE_UINT32);
+            if (indexed) {
+                vkCmdBindIndexBuffer(cmdbuf, index_buffer->handle, 0, VK_INDEX_TYPE_UINT32);
+                push_constants_batched.vertex_buffer = vertex_buffer->device_address();
+            } else {
+                push_constants_batched.vertex_buffer = vertex_buffer_nonindexed->device_address();
+            }
 
             push_constants_batched.time = ((imr_get_time_nano() / 1000) % 10000000000) / 1000000.0f;
 
@@ -386,8 +406,13 @@ int main(int argc, char **argv)
                     //Work here for the index buffer: vkCmdDrawIndexed and add the index buffer to the pipeline
                     push_constants_batched.matrix = m;
                     vkCmdPushConstants(cmdbuf, pipeline->layout(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(push_constants_batched), &push_constants_batched);
-                    
-                    vkCmdDrawIndexed(cmdbuf, static_cast<uint32_t>(indices.size()), positions.size(), 0, 0, 0);
+                    if (indexed) {
+                        vkCmdDrawIndexed(cmdbuf, static_cast<uint32_t>(indices.size()), INSTANCES_COUNT, 0, 0, 0);
+                    }
+                    else {
+                        vkCmdDraw(cmdbuf, static_cast<uint32_t>(vertices_nonindexed.size()), INSTANCES_COUNT, 0, 0);
+                    }
+
                 //}
             });
 
