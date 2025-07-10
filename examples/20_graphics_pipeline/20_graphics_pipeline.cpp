@@ -103,11 +103,12 @@ struct
     mat4 matrix;
     float time;
     VkDeviceAddress face_index_buffer;
+    VkDeviceAddress position_buffer;
 } push_constants_batched;
 
 Camera camera;
 CameraFreelookState camera_state = {
-    .fly_speed = 1.0f,
+    .fly_speed = 100.0f,
     .mouse_sensitivity = 1,
 };
 CameraInput camera_input;
@@ -116,7 +117,7 @@ void camera_update(GLFWwindow *, CameraInput *input);
 
 bool reload_shaders = false;
 
-#define INSTANCES_COUNT 10240
+#define INSTANCES_COUNT 10240000
 
 struct Shaders
 {
@@ -185,6 +186,7 @@ int main(int argc, char **argv)
     std::unique_ptr<imr::Buffer> vertex_buffer;
     std::unique_ptr<imr::Buffer> index_buffer;
     std::unique_ptr<imr::Buffer> face_buffer;
+    std::unique_ptr<imr::Buffer> position_buffer;
     std::vector<uint32_t> indices;
 
     std::vector<vec3> vertices = {
@@ -274,11 +276,15 @@ int main(int argc, char **argv)
     for (size_t i = 0; i < INSTANCES_COUNT; i++)
     {
         vec3 p;
-        p.x = ((float)rand() / RAND_MAX) * 20 - 10;
-        p.y = ((float)rand() / RAND_MAX) * 20 - 10;
-        p.z = ((float)rand() / RAND_MAX) * 20 - 10;
+        p.x = ((float)rand() / RAND_MAX) * 2000 - 1000;
+        p.y = ((float)rand() / RAND_MAX) * 2000 - 1000;
+        p.z = ((float)rand() / RAND_MAX) * 2000 - 1000;
         positions.push_back(p);
     }
+
+    position_buffer = std::make_unique<imr::Buffer>(device, sizeof(vec3) * positions.size(), VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_STORAGE_BUFFER_BIT | VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT);
+    push_constants_batched.position_buffer = position_buffer->device_address();
+    position_buffer->uploadDataSync(0, position_buffer->size, positions.data());
 
     auto prev_frame = imr_get_time_nano();
     float delta = 0;
@@ -373,16 +379,16 @@ int main(int argc, char **argv)
             push_constants_batched.time = ((imr_get_time_nano() / 1000) % 10000000000) / 1000000.0f;
 
             context.frame().withRenderTargets(cmdbuf, { &image }, &*depthBuffer, [&]() {
-                for (auto pos : positions) {
-                    mat4 cube_matrix = m;
-                    cube_matrix = cube_matrix * translate_mat4(pos);
+                //for (auto pos : positions) {
+                    //mat4 cube_matrix = m;
+                    //cube_matrix = cube_matrix * translate_mat4(pos);
 
                     //Work here for the index buffer: vkCmdDrawIndexed and add the index buffer to the pipeline
-                    push_constants_batched.matrix = cube_matrix;
+                    push_constants_batched.matrix = m;
                     vkCmdPushConstants(cmdbuf, pipeline->layout(), VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(push_constants_batched), &push_constants_batched);
                     
-                    vkCmdDrawIndexed(cmdbuf, static_cast<uint32_t>(indices.size()), 1, 0, 0, 0);
-                }
+                    vkCmdDrawIndexed(cmdbuf, static_cast<uint32_t>(indices.size()), positions.size(), 0, 0, 0);
+                //}
             });
 
             auto now = imr_get_time_nano();
